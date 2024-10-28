@@ -20,7 +20,7 @@ def ats_extractor(resume_data):
 
     # Define the prompt to extract resume information
     prompt = '''
-    You are an AI bot designed to act as a professional for parsing resumes. You are given a resume, and your job is to extract the following information:
+    You are an AI bot designed to act as a professional for parsing resumes, give tips, mistakes and rate the resume out of 100 give a score in an integer. You are given a resume, and your job is to extract the following information:
     1. Full name
     2. Email address
     3. GitHub portfolio
@@ -28,8 +28,11 @@ def ats_extractor(resume_data):
     5. Employment details
     6. Technical skills
     7. Soft skills
+    8. Rating out of 100
+    9. Mistakes
+    10. Tips
 
-    Provide the extracted information in JSON format.
+    Provide the extracted information only in JSON format.
     '''
 
     # Prepare the request payload
