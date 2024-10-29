@@ -15,6 +15,9 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     return render_template('index.html')
+@app.route('/how-it-works')
+def how_it_works():
+    return render_template('how-it-works.html')
 
 @app.route("/process", methods=["POST"])
 def ats():

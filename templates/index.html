@@ -7,6 +7,25 @@
     <title>Resume Parser</title>
 </head>
 <body class="bg-gray-50 text-gray-900">
+    <div class="flex p-4 items-center justify-between bg-secondary shadow-sm">
+        <img src="{{ url_for('static', filename='flogo.svg') }}"  />
+
+        <ul class="hidden md:flex gap-6">
+            <li class="hover:text-primary hover:font-bold transition-all cursor-pointer">
+              <a href="/how-it-works">How it Works?</a>
+            </li>
+            <li class="hover:text-primary hover:font-bold transition-all cursor-pointer">
+              <a href="http://127.0.0.1:8000/">Resume Parser</a>
+            </li>
+            <li class="hover:text-primary hover:font-bold transition-all cursor-pointer">
+              <a href="http://localhost:5173/">Quiz</a>
+            </li>
+            <li class="hover:text-primary hover:font-bold transition-all cursor-pointer">
+              <a href="http://localhost:3000/dashboard">Interview Dashboard</a>
+            </li>
+          </ul>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-full">Log In</button>
+    </div>
     <div class="relative isolate overflow-hidden bg-white">
         <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-200" aria-hidden="true">
             <defs>
@@ -91,13 +110,13 @@
                 </div>
             </div>
         {% endfor %}
-        {% if data.rating and data.rating > 50 %}
+
             <div class="mt-6 text-center">
-                <a href="/quiz" class="bg-green-500 px-8 py-2.5 text-sm font-semibold text-white rounded-full shadow-sm hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
+                <a href="http://localhost:5173/" class="bg-green-500 px-8 py-2.5 text-sm font-semibold text-white rounded-full shadow-sm hover:bg-green-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
                     Move to Quiz
                 </a>
             </div>
-        {% endif %}
+
     {% endif %}
 </div>
 
